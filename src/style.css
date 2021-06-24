@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("./assets/images/niels-erdmann-klO77jxxlYw-unsplash.jpg")
+    no-repeat center center fixed;
+  font-family: "Bebas Neue", cursive;
+}
+
+footer {
+  margin-top: 1rem;
+  height: auto;
+
+  color: #fff;
+  text-align: center;
+  background-color: black;
+  border-top: 1px solid #fff;
+  width: 100%;
+}
+footer p {
+  display: inline-block;
+}
+h1 {
+  padding: 1rem;
+  text-align: center;
+  font-size: 2.5rem;
+}
+p {
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+
+hr {
+  width: 50%;
+  align-self: center;
+}
+.container1 {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  height: auto;
+  flex: 1;
+}
+.explaination {
+  margin: 2rem;
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  color: white;
+  text-align: left;
+  justify-content: start;
+}
+.pad {
+  flex: 2;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  place-content: center center;
+  place-items: center center;
+  gap: 1rem 1rem;
+}
+
+.key {
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  border: 1px solid yellow;
+  transition: 0.1s;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.key p {
+  font-size: 2rem;
+}
+
+/* On Click/KeyDown Classes */
+
+.playing {
+  transform: scale(0.5);
+}
+
+.red {
+  background-color: rgba(224, 42, 72, 0.7);
+}
+
+.blue {
+  background-color: rgba(57, 54, 212, 0.7);
+}
+
+.green {
+  background-color: rgba(57, 207, 37, 0.7);
+}
+
+span {
+  color: yellow;
+  margin-top: 5px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 780px) {
+  .container {
+    flex-flow: column;
+  }
+
+  .pad {
+    margin-bottom: 5rem;
+  }
+  .explaination {
+    text-align: center;
+  }
+}
